@@ -31,7 +31,7 @@ fi
 echo "Building $1 for $2"
 mkdir -p $GITHUB_WORKSPACE/build/${SubDirectoryLocation:-""}
 cd "$GITHUB_WORKSPACE/$5"
-godot --headless --editor --quit --verbose
+# godot --headless --editor --quit --verbose
 godot --headless --${mode} "$2" $GITHUB_WORKSPACE/build/${SubDirectoryLocation:-""}$1$executable
 echo "Build Done"
 
