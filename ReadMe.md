@@ -158,29 +158,25 @@ steps:
 
     The name of the preset found in `export_presets.cfg` you would like to build.
 
-#### subdirectory
-
-    *Optional*
+#### subdirectory *Optional*
 
     The subdirectory in the `build` folder to output build to, can be useful for self packaging.
 
-#### package
-
-    *Optional*
+#### package *Optional*
 
     Boolean value, when set to true, builds artficat zip file.
 
-#### projectDir
-
-    *Optional*
+#### projectDir *Optional*
 
     Directory in workspace containing your godot project.
 
-#### debugMode
-
-    *Optional*
+#### debugMode *Optional*
 
     Boolean value, when set to true, runs export in debug mode.
+
+#### executableExtension *Optional*
+
+    String value, when set , adds the exetension to the *name* param.
 
 ### Outputs
 
