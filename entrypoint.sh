@@ -25,7 +25,8 @@ cd "$GITHUB_WORKSPACE/$5"
 godot --headless --${mode} "$2" $GITHUB_WORKSPACE/build/${SubDirectoryLocation:-""}$1
 echo "Build Done"
 
-echo ::set-output name=build::build/${SubDirectoryLocation:-""}
+#echo ::set-output name=build::build/${SubDirectoryLocation:-""}
+echo "build=build/${SubDirectoryLocation:-""}" >> $GITHUB_OUTPUT
 
 
 if [ "$4" = "true" ]
@@ -34,6 +35,7 @@ then
     mkdir -p $GITHUB_WORKSPACE/package
     cd $GITHUB_WORKSPACE/build
     zip $GITHUB_WORKSPACE/package/artifact.zip ${SubDirectoryLocation:-"."} -r
-    echo ::set-output name=artifact::package/artifact.zip
+    #echo ::set-output name=artifact::package/artifact.zip
+    echo "artifact=package/artifact.zip" >> $GITHUB_OUTPUT
     echo "Done"
 fi
