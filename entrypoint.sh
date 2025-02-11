@@ -21,7 +21,7 @@ fi
 executable=""
 if [ "$7" != "" ]
 then
-    executable=".${$7}"    
+    executable=".$7"    
     
 fi
 
