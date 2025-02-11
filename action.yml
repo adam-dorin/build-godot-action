@@ -20,6 +20,9 @@ inputs:
   debugMode:
     description: 'Whether or not to use `--export-debug`'
     default: false
+  executableExtension:
+    description: 'Optional: Sets extension for for the main binary'
+    default: ""
 runs:
   using: docker
   image: Dockerfile
@@ -30,6 +33,7 @@ runs:
     - ${{ inputs.package }}
     - ${{ inputs.projectDir }}
     - ${{ inputs.debugMode }}
+    - ${{ inputs.executableExtension }}
 branding:
   icon: loader
   color: blue
